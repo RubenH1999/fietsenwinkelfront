@@ -1,0 +1,26 @@
+<form (ngSubmit)="filterEmail()">
+  <p>Filter by email</p>
+  <input type="text" [(ngModel)]="input" name="firstname" />
+  <button>Submit</button>
+</form>
+
+<p-table [value]="bestellingen">
+  <ng-template pTemplate="header">
+    <tr>
+      <th>Leverancier bon nummer</th>
+      <th>klant nummer</th>
+      <th>email</th>
+      <th>delete</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-bestelling>
+    <tr>
+      <td>{{ bestelling?.leverancierBonNummer }}</td>
+      <td><a           [routerLink]="['/klant/', bestelling.klantnummer]"
+      >{{ bestelling?.klantnummer}}</a></td>
+      <td>{{ bestelling?.email }}</td>
+      <td><a (click)="deleteBestelling(bestelling?.leverancierBonNummer)">x</a> </td>
+    </tr>
+  </ng-template>
+</p-table>
+<button routerLink="/bestelling">Maak  nieuwe bestelling aan</button>

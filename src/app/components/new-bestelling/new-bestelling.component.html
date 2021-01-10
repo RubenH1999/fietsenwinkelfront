@@ -1,0 +1,26 @@
+<form (ngSubmit)="plaatsBestelling()">
+
+  {{bestelling | json}}
+  <p>Leverancier bon nummer</p>
+  <input type="text" [(ngModel)]="bestelling.leverancierBonNummer" name="leverancierBonNummer" />
+
+  <p>Klantnummer</p>
+  <input type="text" [(ngModel)]="bestelling.klantnummer" name="klantnummer" />
+
+  <p>email</p>
+  <input type="text" [(ngModel)]="bestelling.email" name="email" />
+
+  <p>voorschot</p>
+  <input type="text" [(ngModel)]="bestelling.voorschot" name="voorschot" />
+
+  <p>Prijs</p>
+  <input type="text" [(ngModel)]="bestelling.prijs" name="prijs" />
+
+  <p>Merk</p>
+  <input type="text" [(ngModel)]="bestelling.fietsMerk" name="fietsMerk" />
+
+  <p>Model</p>
+  <input type="text" [(ngModel)]="bestelling.model" name="fietsModel" />
+
+  <button>PLaats bestelling</button>
+</form>

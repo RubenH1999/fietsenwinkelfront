@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "fietsenwinkel-frontend"
+    }
+  },
+  "defaultProject": "fietsenwinkel-frontend",
+  "cli": {
+    "analytics": false
+  }
 }
